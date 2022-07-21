@@ -9,6 +9,15 @@ import UIKit
 
 class CoursesTableViewCell: UITableViewCell {
 
+    @IBOutlet var titleLabel: UILabel!
+    @IBOutlet var subtitleLabel: UILabel!
+    @IBOutlet var descriptionLabel: UILabel!
+    @IBOutlet var courseBackground: UIImageView!
+    @IBOutlet var courseBanner: UIImageView!
+    @IBOutlet var courseLogo: CustomView!
+    
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         

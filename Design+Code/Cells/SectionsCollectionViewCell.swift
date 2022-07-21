@@ -1,24 +1,20 @@
 //
-//  HandbookCollectionViewCell.swift
+//  SectionsCollectionViewCell.swift
 //  Design+Code
 //
-//  Created by Mikail Baykara on 15.05.2022.
+//  Created by Mikail Baykara on 21.07.2022.
 //
 
 import UIKit
 
-class HandbookCollectionViewCell: UICollectionViewCell {
-    @IBOutlet var overlay: UIView!
+class SectionsCollectionViewCell: UICollectionViewCell {
+    
+    
     @IBOutlet var banner: UIImageView!
     @IBOutlet var logo: CustomImageView!
-    @IBOutlet var progressBar: UIProgressView!
     @IBOutlet var subtitleLabel: UILabel!
-    @IBOutlet var descriptionLabel: UILabel!
     @IBOutlet var titleLabel: UILabel!
-    
-    let gradient = CAGradientLayer()
-    
-    
+        
     override public func layoutSubviews() {
         super.layoutSubviews()
         super.layoutIfNeeded()
@@ -34,19 +30,10 @@ class HandbookCollectionViewCell: UICollectionViewCell {
         layer.cornerRadius = 30
         layer.cornerCurve = .continuous
 
-        gradient.startPoint = CGPoint(x: 0, y: 0)
-        gradient.endPoint = CGPoint(x: 1, y:1)
-        gradient.frame = overlay.frame
-        gradient.cornerCurve = .continuous
-        gradient.cornerRadius = 30
-
-        overlay.layer.insertSublayer(gradient, at: 0)
-        overlay.layer.cornerCurve = .continuous
-        overlay.layer.cornerRadius = 30
     }
   
     override func prepareForReuse() {
         super.prepareForReuse()
     }
+    
 }
-
